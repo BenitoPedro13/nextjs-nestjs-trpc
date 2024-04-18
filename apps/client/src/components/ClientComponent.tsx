@@ -1,5 +1,6 @@
 "use client";
 
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
 type TClientSideProps = {
@@ -7,6 +8,10 @@ type TClientSideProps = {
 };
 
 export default function ClientSide({ create }: TClientSideProps) {
+  const query = useQuery({ queryKey: ["hello"], queryFn: create });
+
+  console.log("🚀 ~ ClientSide ~ query:", query);
+
   const [a, setA] = useState<string>("");
 
   const handleClick = () =>
