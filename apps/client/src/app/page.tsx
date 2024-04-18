@@ -1,5 +1,5 @@
 import ClientSide from "@client/components/ClientComponent";
-import { trpc } from "@client/trpc.ts";
+import { trpc } from "@client/utils/trpc";
 
 import { create } from "@client/actions";
 
